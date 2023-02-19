@@ -1,9 +1,11 @@
 {
-  "name": "electron-devtools-installer",
-  "version": "0.0.0-development",
+  "name": "@chris-si/electron-devtools-installer",
+  "version": "4.0.0",
   "description": "An easy way to install Dev Tools extensions into Electron applications",
   "main": "dist/index.js",
   "scripts": {
+    "build": "npx tslint src/* && tsfmt -r && tsc",
+    "prepublish": "tsc",
     "prettier:check": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
     "prettier:write": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "compile": "tsc",
@@ -28,7 +30,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MarshallOfSound/electron-devtools-installer.git"
+    "url": "https://github.com/chris-si/electron-devtools-installer.git"
   },
   "devDependencies": {
     "@continuous-auth/semantic-release-npm": "^3.0.0",
